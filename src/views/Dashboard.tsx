@@ -32,34 +32,70 @@ export const Dashboard: React.FC = () => {
         </Button>
       </div>
 
-      <div className="metrics-grid">
+      <div className="metrics-grid" role="region" aria-label="Key Performance Metrics">
         <Card className="metric-card metric-primary">
-          <div className="metric-value">{mockDashboardMetrics.totalActiveTasks}</div>
+          <div 
+            className="metric-value" 
+            role="status" 
+            aria-label="Total Active Tasks"
+          >
+            {mockDashboardMetrics.totalActiveTasks}
+          </div>
           <div className="metric-label">Total Active Tasks</div>
         </Card>
 
         <Card className="metric-card metric-danger">
-          <div className="metric-value">{mockDashboardMetrics.overdueTasks}</div>
+          <div 
+            className="metric-value" 
+            role="status" 
+            aria-label="Overdue Tasks Count"
+          >
+            {mockDashboardMetrics.overdueTasks}
+          </div>
           <div className="metric-label">Overdue Tasks</div>
         </Card>
 
         <Card className="metric-card metric-warning">
-          <div className="metric-value">{mockDashboardMetrics.unplannedTasks}</div>
+          <div 
+            className="metric-value" 
+            role="status" 
+            aria-label="Unplanned Tasks Count"
+          >
+            {mockDashboardMetrics.unplannedTasks}
+          </div>
           <div className="metric-label">Unplanned Tasks</div>
         </Card>
 
         <Card className="metric-card metric-info">
-          <div className="metric-value">{mockDashboardMetrics.tasksWithoutResources}</div>
+          <div 
+            className="metric-value" 
+            role="status" 
+            aria-label="Tasks Without Resources Count"
+          >
+            {mockDashboardMetrics.tasksWithoutResources}
+          </div>
           <div className="metric-label">Tasks Without Resources</div>
         </Card>
 
         <Card className="metric-card metric-success">
-          <div className="metric-value">{mockDashboardMetrics.completionRate.toFixed(1)}%</div>
+          <div 
+            className="metric-value" 
+            role="status" 
+            aria-label="Completion Rate Percentage"
+          >
+            {mockDashboardMetrics.completionRate.toFixed(1)}%
+          </div>
           <div className="metric-label">Completion Rate</div>
         </Card>
 
         <Card className="metric-card metric-secondary">
-          <div className="metric-value">{mockDashboardMetrics.resourceUtilization.toFixed(1)}%</div>
+          <div 
+            className="metric-value" 
+            role="status" 
+            aria-label="Resource Utilization Percentage"
+          >
+            {mockDashboardMetrics.resourceUtilization.toFixed(1)}%
+          </div>
           <div className="metric-label">Resource Utilization</div>
         </Card>
       </div>

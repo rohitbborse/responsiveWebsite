@@ -43,20 +43,32 @@ export const GanttChart: React.FC = () => {
       </div>
 
       <Card title="Work Task Timeline">
-        <div className="gantt-container">
-          <div className="gantt-timeline">
+        <div className="gantt-container" role="region" aria-label="Gantt Chart Timeline">
+          <div className="gantt-timeline" role="list">
             {mockWorkTasks.map((task) => (
-              <div key={task.id} className="gantt-row">
+              <div 
+                key={task.id} 
+                className="gantt-row"
+                role="listitem"
+                tabIndex={0}
+                aria-label={`Work Task ${task.id}: ${task.jobDescription}`}
+              >
                 <div className="gantt-task-info">
                   <div className="task-id">{task.id}</div>
                   <div className="task-object">{task.objectId}</div>
                   <div className="task-description">{task.jobDescription}</div>
                   <div className="task-meta">
                     <Badge variant="info">{task.workType}</Badge>
-                    <span className="task-hours">{task.estimatedHours}h</span>
+                    <span className="task-hours" aria-label={`Estimated ${task.estimatedHours} hours`}>
+                      {task.estimatedHours}h
+                    </span>
                   </div>
                 </div>
-                <div className="gantt-bar-container">
+                <div 
+                  className="gantt-bar-container"
+                  role="img"
+                  aria-label={`Task timeline from ${formatDate(task.earliestStart)} to ${formatDate(task.latestFinish)}, status: ${task.status}`}
+                >
                   <div
                     className="gantt-bar"
                     style={{ backgroundColor: getStatusColor(task.status) }}

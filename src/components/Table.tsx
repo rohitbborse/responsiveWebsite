@@ -27,13 +27,20 @@ export function Table<T extends Record<string, any>>({
   emptyMessage = 'No data available'
 }: TableProps<T>) {
   return (
-    <div className="table-container">
-      <table className={`data-table ${className}`}>
+    <div 
+      className="table-container" 
+      role="region" 
+      aria-label="Data table"
+      tabIndex={0}
+    >
+      <table className={`data-table ${className}`} role="table">
         <thead>
-          <tr>
+          <tr role="row">
             {columns.map((column) => (
               <th
                 key={column.key}
+                role="columnheader"
+                scope="col"
                 style={column.width ? { width: column.width } : undefined}
               >
                 {column.header}
@@ -43,16 +50,16 @@ export function Table<T extends Record<string, any>>({
         </thead>
         <tbody>
           {data.length === 0 ? (
-            <tr>
-              <td colSpan={columns.length} className="empty-message">
+            <tr role="row">
+              <td colSpan={columns.length} className="empty-message" role="cell">
                 {emptyMessage}
               </td>
             </tr>
           ) : (
             data.map((item, index) => (
-              <tr key={index}>
+              <tr key={index} role="row">
                 {columns.map((column) => (
-                  <td key={column.key}>
+                  <td key={column.key} role="cell">
                     {column.render
                       ? column.render(item)
                       : item[column.key]}

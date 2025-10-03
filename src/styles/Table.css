@@ -3,6 +3,13 @@
   overflow-x: auto;
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-gray-200);
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+.table-container:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .data-table {
