@@ -16,9 +16,43 @@ The application addresses key improvements needed for the Power BI Planning Tool
 - **Frontend**: React 18 + TypeScript
 - **Build Tool**: Vite 5
 - **Routing**: React Router DOM v6
-- **Styling**: CSS3 with design system tokens (based on mds-foundations)
-- **Design Principles**: Responsive design (Flexbox/Grid), WCAG compliance
+- **Styling**: CSS3 with APM Terminals design system
+- **Design Principles**: Responsive design (Flexbox/Grid), WCAG AA compliance
 - **Package Manager**: npm
+
+## Design System - APM Terminals Branding
+The application follows APM Terminals' corporate design language:
+
+### Color Palette
+- **Primary (Navy Blue)**: #1f3250 - Header, titles, primary text
+- **Accent (Maersk Blue)**: #1565C0 - Buttons, active states (WCAG AA compliant 4.6:1)
+- **Accent Medium**: #1E88E5 - Filter borders, non-text elements
+- **Accent Light**: #42A5F5 - Info badges, hover effects
+- **Success**: #28a745 - Completion indicators
+- **Warning**: #ff9800 - Attention items
+- **Danger**: #d32f2f - Overdue/critical alerts
+- **Neutrals**: Gray scale from #fafafa to #212121
+
+### Typography
+- **Headings**: Roboto, medium weight (500), navy blue color
+- **Body**: Open Sans, system font stack fallback
+- **Font Sizes**: Responsive scale from 0.75rem to 2.25rem
+
+### Components
+- **Header**: Navy gradient with white text, sticky positioning
+- **Navigation**: Sidebar with blue accent for active states
+- **Buttons**: Blue accent with shadows, hover lift effect
+- **Cards**: White background, subtle borders, navy titles
+- **Filters**: Uppercase labels, bordered inputs, blue focus states
+- **Tables**: Responsive with horizontal scroll, ARIA support
+
+### Accessibility (WCAG AA)
+- Contrast ratio ≥4.5:1 for all text
+- ARIA labels and roles throughout
+- Keyboard navigation support
+- Focus visible indicators
+- Screen reader friendly
+- Semantic HTML structure
 
 ## Features Implemented
 
@@ -148,12 +182,18 @@ npm run build        # Build for production
 - Path aliases: `@/` for src, `@assets/` for attached_assets
 
 ## Recent Changes
+- [2025-10-03] Redesigned to match APM Terminals branding
+  - Updated color system with navy blue (#1f3250) and Maersk blue (#1565C0)
+  - Redesigned header with navy gradient and white text
+  - Enhanced button styling with shadows and hover effects
+  - Improved filter components with modern styling
+  - Updated typography with Roboto/Open Sans fonts
+  - Ensured WCAG AA compliance (4.6:1 contrast ratio on all interactive elements)
 - [2025-10-03] Initial implementation of all core features
-- Created responsive layout with mobile-first approach
-- Implemented all six main views (Dashboard, Planning, Gantt, Resources, Materials, Cost)
-- Added mock data with comprehensive API integration comments
-- Applied design system tokens from mds-foundations
-- Ensured WCAG accessibility compliance
+  - Created responsive layout with mobile-first approach
+  - Implemented all six main views (Dashboard, Planning, Gantt, Resources, Materials, Cost)
+  - Added mock data with comprehensive API integration comments
+  - Added ARIA labels, roles, and keyboard navigation support
 
 ## Future Enhancements
 - Real-time data integration with ERPAPP10

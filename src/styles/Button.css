@@ -41,17 +41,17 @@
   width: 100%;
 }
 
-/* Variants - APM Terminals Style */
+/* Variants - APM Terminals Style with WCAG AA Compliance */
 .btn-primary {
-  background-color: var(--color-accent);
+  background-color: #1565C0;
   color: white;
-  box-shadow: 0 2px 4px rgba(66, 165, 245, 0.2);
+  box-shadow: 0 2px 4px rgba(21, 101, 192, 0.2);
   font-weight: 600;
 }
 
 .btn-primary:hover:not(:disabled) {
-  background-color: var(--color-accent-dark);
-  box-shadow: 0 4px 8px rgba(66, 165, 245, 0.3);
+  background-color: #0D47A1;
+  box-shadow: 0 4px 8px rgba(21, 101, 192, 0.3);
   transform: translateY(-1px);
 }
 

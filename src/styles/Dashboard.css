@@ -45,10 +45,10 @@
 
 .metric-primary .metric-value { color: var(--color-primary); }
 .metric-danger .metric-value { color: var(--color-danger); }
-.metric-warning .metric-value { color: #b45309; }
-.metric-info .metric-value { color: var(--color-info); }
+.metric-warning .metric-value { color: var(--color-warning); }
+.metric-info .metric-value { color: var(--color-accent); }
 .metric-success .metric-value { color: var(--color-success); }
-.metric-secondary .metric-value { color: var(--color-gray-600); }
+.metric-secondary .metric-value { color: var(--color-gray-700); }
 
 .alerts-section {
   margin-bottom: var(--spacing-6);

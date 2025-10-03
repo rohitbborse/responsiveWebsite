@@ -26,7 +26,12 @@ export const Dashboard: React.FC = () => {
   return (
     <div className="dashboard">
       <div className="dashboard-header">
-        <h1>Maintenance Planning Dashboard</h1>
+        <div>
+          <h1>Maintenance Planning Dashboard</h1>
+          <p style={{ color: 'var(--color-gray-600)', fontSize: 'var(--font-size-sm)', margin: '0.5rem 0 0 0' }}>
+            Real-time visibility of maintenance operations and resource allocation
+          </p>
+        </div>
         <Button onClick={handleExport} variant="primary">
           Export Report
         </Button>

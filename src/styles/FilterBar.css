@@ -40,13 +40,13 @@
 }
 
 .filter-select:hover {
-  border-color: var(--color-accent);
+  border-color: var(--color-accent-dark);
 }
 
 .filter-select:focus {
   outline: none;
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(66, 165, 245, 0.15);
+  border-color: var(--color-accent-dark);
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.15);
 }
 
 @media (max-width: 768px) {

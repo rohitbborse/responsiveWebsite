@@ -105,13 +105,13 @@
 }
 
 .nav-link.active {
-  background-color: var(--color-accent);
+  background-color: #1565C0;
   color: white;
   font-weight: 600;
 }
 
 .nav-link.active:hover {
-  background-color: var(--color-accent-dark);
+  background-color: #0D47A1;
 }
 
 .nav-icon {

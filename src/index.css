@@ -22,10 +22,12 @@
   --color-danger: #d32f2f;
   --color-info: #42A5F5;
   
-  /* Maersk Blue Accent */
+  /* Maersk Blue Accent - WCAG AA Compliant */
   --color-accent: #42A5F5;
   --color-accent-light: #64B5F6;
   --color-accent-dark: #1E88E5;
+  --color-accent-darker: #1565C0;
+  --color-accent-accessible: #0D47A1;
   
   /* Neutral Colors */
   --color-white: #ffffff;
