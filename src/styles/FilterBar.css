@@ -1,13 +1,14 @@
-/* Filter Bar Component Styles */
+/* Filter Bar Component Styles - APM Terminals Service Locator Style */
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-4);
-  padding: var(--spacing-4);
+  padding: var(--spacing-5);
   background-color: var(--color-white);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-  margin-bottom: var(--spacing-5);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: var(--spacing-6);
+  border: 1px solid var(--color-gray-200);
 }
 
 .filter-group {
@@ -21,28 +22,31 @@
 .filter-label {
   font-size: var(--font-size-sm);
   font-weight: 600;
-  color: var(--color-gray-700);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .filter-select {
-  padding: var(--spacing-2) var(--spacing-3);
-  border: 1px solid var(--color-gray-300);
+  padding: var(--spacing-3) var(--spacing-4);
+  border: 2px solid var(--color-gray-300);
   border-radius: var(--radius-md);
   font-size: var(--font-size-sm);
   color: var(--color-gray-800);
   background-color: var(--color-white);
   cursor: pointer;
-  transition: border-color var(--transition-fast);
+  transition: all var(--transition-fast);
+  font-weight: 500;
 }
 
 .filter-select:hover {
-  border-color: var(--color-gray-400);
+  border-color: var(--color-accent);
 }
 
 .filter-select:focus {
   outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(66, 165, 245, 0.15);
 }
 
 @media (max-width: 768px) {

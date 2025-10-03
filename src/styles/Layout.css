@@ -5,11 +5,12 @@
   min-height: 100vh;
 }
 
-/* Header */
+/* Header - APM Terminals Style */
 .layout-header {
-  background-color: var(--color-white);
-  border-bottom: 1px solid var(--color-gray-200);
-  box-shadow: var(--shadow-sm);
+  background-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  border-bottom: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   position: sticky;
   top: 0;
   z-index: var(--z-sticky);
@@ -31,26 +32,33 @@
 }
 
 .brand-icon {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-3xl);
+  filter: brightness(0) invert(1);
 }
 
 .brand-title {
   font-size: var(--font-size-xl);
-  font-weight: 700;
-  color: var(--color-gray-900);
+  font-weight: 500;
+  color: var(--color-white);
+  letter-spacing: 0.5px;
   margin: 0;
 }
 
 .mobile-menu-btn {
   display: none;
   font-size: var(--font-size-2xl);
+  color: var(--color-white);
   padding: var(--spacing-2);
   border-radius: var(--radius-md);
   transition: background-color var(--transition-fast);
 }
 
 .mobile-menu-btn:hover {
-  background-color: var(--color-gray-100);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-btn:focus-visible {
+  outline-color: var(--color-white);
 }
 
 /* Body */
@@ -97,12 +105,13 @@
 }
 
 .nav-link.active {
-  background-color: var(--color-primary);
+  background-color: var(--color-accent);
   color: white;
+  font-weight: 600;
 }
 
 .nav-link.active:hover {
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-accent-dark);
 }
 
 .nav-icon {
@@ -121,10 +130,10 @@
   background-color: var(--color-gray-50);
 }
 
-/* Footer */
+/* Footer - APM Terminals Style */
 .layout-footer {
-  background-color: var(--color-gray-900);
-  color: var(--color-gray-300);
+  background-color: var(--color-primary);
+  color: rgba(255, 255, 255, 0.8);
   padding: var(--spacing-6);
   margin-top: auto;
 }
@@ -141,7 +150,7 @@
 }
 
 .footer-note {
-  color: var(--color-gray-400);
+  color: rgba(255, 255, 255, 0.6);
   font-size: var(--font-size-xs);
 }
 
