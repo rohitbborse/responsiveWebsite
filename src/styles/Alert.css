@@ -1,0 +1,72 @@
+/* Alert Component Styles */
+.alert {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-lg);
+  border: 2px solid;
+  transition: all var(--transition-base);
+}
+
+.alert-clickable {
+  cursor: pointer;
+}
+
+.alert-clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.alert-icon {
+  font-size: var(--font-size-2xl);
+  flex-shrink: 0;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-count {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-1);
+}
+
+.alert-message {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+/* Severity Variants */
+.alert-high {
+  background-color: #fff5f5;
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.alert-medium {
+  background-color: #fffbeb;
+  border-color: var(--color-warning);
+  color: #b45309;
+}
+
+.alert-low {
+  background-color: #f0f9ff;
+  border-color: var(--color-info);
+  color: #075985;
+}
+
+@media (max-width: 640px) {
+  .alert {
+    padding: var(--spacing-3);
+  }
+  
+  .alert-icon {
+    font-size: var(--font-size-xl);
+  }
+  
+  .alert-count {
+    font-size: var(--font-size-2xl);
+  }
+}

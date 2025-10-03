@@ -1,0 +1,21 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    host: '0.0.0.0',
+    port: 5000,
+    // Allow all hosts for iframe compatibility in Replit
+    hmr: {
+      clientPort: 5000
+    }
+  },
+  resolve: {
+    alias: {
+      '@': '/src',
+      '@assets': '/attached_assets'
+    }
+  }
+})
